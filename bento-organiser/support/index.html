@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support & FAQ - Bento Organiser</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0a080c;
+            --card-dark: #131116;
+            --text-main: #f5f6fa;
+            --text-muted: #a4b0be;
+            --accent: #ffc048;
+            --accent-green: #1dd1a1;
+            --accent-blue: #54a0ff;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: var(--card-dark);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-main);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 8px;
+            margin-top: 40px;
+        }
+
+        p, li {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: var(--text-main);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .faq-question::before {
+            content: "🍣";
+            font-size: 1.2rem;
+        }
+
+        .faq-answer {
+            color: var(--text-muted);
+            padding-left: 28px;
+        }
+
+        .support-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 25px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .support-email {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--accent-blue);
+            margin: 15px 0;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .support-email:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bento Organiser</h1>
+        <div class="subtitle">Support & FAQ</div>
+
+        <p>Welcome to the Bento Organiser support hub. If a level feels unsolvable, a purchase hasn't unlocked, or something's not stacking right, we're here to help.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <div class="faq-question">Is every level guaranteed to be solvable?</div>
+            <div class="faq-answer">Yes - every level is generated using an algorithm that guarantees a valid solution exists, so if you're stuck, there is always a way through with the pieces provided.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">How do I restore "Remove Ads"?</div>
+            <div class="faq-answer">Open the in-game Menu and tap "Restore Purchases". As long as you're signed in with the same Apple/Google ID used originally, it will restore instantly for free.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">How do I reset a level I've made a mistake on?</div>
+            <div class="faq-answer">Open the in-game Menu and use the "Restart Game" option to reset your current level back to its starting arrangement.</div>
+        </div>
+
+        <h2>Contact Our Support Team</h2>
+        <div class="support-card">
+            <p>Need a hand with something specific? Email us with your device model, iOS/Android version, and a brief description of the issue:</p>
+            <a href="mailto:hello@daryl.in" class="support-email">hello@daryl.in</a>
+            <br>
+            <p>We aim to respond to all enquiries within 24 hours.</p>
+        </div>
+
+        <footer>
+            &copy; 2026 Bento Organiser. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>
