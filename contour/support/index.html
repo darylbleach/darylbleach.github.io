@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support &amp; FAQ - Contour</title>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=Karla:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper: #15111f;
+            --card: #201a30;
+            --ink: #f4eeff;
+            --ink-soft: #a89bc0;
+            --line: #372c48;
+            --accent: #f0a83c;
+            --start: #4fd1c5;
+        }
+        body {
+            font-family: 'Karla', sans-serif;
+            background-color: var(--paper);
+            color: var(--ink);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: var(--card);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid var(--line);
+            box-sizing: border-box;
+        }
+        h1 { font-family: 'Unbounded', sans-serif; font-size: 2.1rem; font-weight: 700; color: var(--accent); margin-bottom: 5px; text-align: center; letter-spacing: -0.01em; }
+        .subtitle { text-align: center; color: var(--ink-soft); font-size: 0.9rem; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 1.5px; }
+        h2 { font-size: 1.3rem; font-weight: 700; color: var(--ink); border-bottom: 2px solid var(--line); padding-bottom: 8px; margin-top: 40px; }
+        p, li { color: var(--ink-soft); font-size: 1rem; }
+        .faq-item { margin-bottom: 25px; }
+        .faq-question { font-weight: 700; color: var(--ink); font-size: 1.05rem; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+        .faq-question::before { content: "✒️"; font-size: 1.1rem; }
+        .faq-answer { color: var(--ink-soft); padding-left: 28px; }
+        .support-card { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 25px; margin-top: 30px; text-align: center; }
+        .support-email { font-size: 1.2rem; font-weight: 700; color: var(--start); margin: 15px 0; display: inline-block; text-decoration: none; }
+        footer { margin-top: 50px; text-align: center; font-size: 0.85rem; color: var(--ink-soft); border-top: 1px solid var(--line); padding-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contour</h1>
+        <div class="subtitle">Player Support &amp; FAQ</div>
+
+        <p>Welcome to the Contour support hub. If you've run into an issue or want to report a bug, we're here to help you get back to tracing.</p>
+
+        <h2>Frequently Asked Questions (FAQ)</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">How do I restore my "Remove Ads" purchase?</div>
+            <div class="faq-answer">
+                Tap the 🛍️ Shop button, then "Restore Purchases". As long as you're signed in with the same Apple/Google ID used for the purchase, your ad-free status restores instantly for free.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Why did I hit a "Dead End"?</div>
+            <div class="faq-answer">
+                Somewhere the shape touches itself at a small ring - a pinch point. The first time you pass through one, always peel off into the fresh loop attached there before continuing your original path. Skip it, and it seals shut for good, leaving that part of the outline unreachable. Try Again always redraws the exact same shape, so you can study where it went wrong.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Why did my line reset when I lifted my finger?</div>
+            <div class="faq-answer">
+                The whole outline has to be traced in one continuous movement - lifting your finger mid-trace resets the line, even if nothing was wrong yet. Tapping a HUD button (Hint, Mute, Shop, Help) is the one exception: do that right after lifting and your progress is kept, so you can check something mid-puzzle without losing your place.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How do hints work?</div>
+            <div class="faq-answer">
+                Tap 💡 Hint (costs 3 🖋️ Ink) at any point mid-level. It rings the correct next point to move to from wherever your line currently ends. Earn Ink by finishing levels - shapes with more pinch points pay out more.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Can I sync my progress across devices?</div>
+            <div class="faq-answer">
+                Not currently - your level, Ink balance, and purchases are saved locally on your device. Cross-device sync may come in a future update.
+            </div>
+        </div>
+
+        <h2>Contact Support Team</h2>
+        <div class="support-card">
+            <p>Need help? Email us with your device model, iOS/Android version, and a brief description of the issue:</p>
+            <a href="mailto:hello@daryl.in" class="support-email">hello@daryl.in</a>
+            <br>
+            <p>We aim to respond within 24 hours.</p>
+        </div>
+
+        <footer>
+            &copy; 2026 Contour. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>
