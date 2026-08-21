@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support & FAQ - Daily Digital Declutter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f5f4f1;
+            --surface: #ffffff;
+            --line: rgba(28, 27, 26, 0.09);
+            --text-primary: #1c1b1a;
+            --text-muted: #77746f;
+            --accent: #1f7a5c;
+            --accent-soft: rgba(31, 122, 92, 0.1);
+            --accent-strong: #16513e;
+            --shadow-card: 0 8px 24px rgba(28, 27, 26, 0.08);
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: var(--surface);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--line);
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: var(--accent-strong);
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            border-bottom: 2px solid var(--line);
+            padding-bottom: 8px;
+            margin-top: 40px;
+        }
+
+        p, li {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        strong {
+            color: var(--text-primary);
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+        }
+
+        .faq-question {
+            font-weight: 700;
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .faq-answer {
+            color: var(--text-muted);
+        }
+
+        .support-card {
+            background: var(--accent-soft);
+            border: 1px solid rgba(31, 122, 92, 0.2);
+            border-radius: 16px;
+            padding: 25px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .support-email {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--accent-strong);
+            margin: 15px 0;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .support-email:hover {
+            opacity: 0.75;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--line);
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Daily Digital Declutter</h1>
+        <div class="subtitle">Support & FAQ</div>
+
+        <p>Welcome to the Daily Digital Declutter support hub. If your streak looks wrong, a purchase hasn't appeared, search seems off, or something's not swiping right, we're happy to help.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <div class="faq-question">Does this app delete my real photos?</div>
+            <div class="faq-answer">Yes — the cards you swipe through are genuinely pulled from your own Photos library. Nothing is ever deleted, though, until you confirm the whole marked batch behind iOS's own native "Delete N Photos?" prompt. Cancel that prompt and nothing is removed; your marks are kept so you can pick up where you left off.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Does my photo data ever leave my phone?</div>
+            <div class="faq-answer">No. Your photos, videos, and thumbnails are never uploaded anywhere — there's no server behind this app. On-device search and duplicate detection use Apple's Vision framework running locally on your phone; search terms and classification results never leave your device either.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">My streak reset unexpectedly - why?</div>
+            <div class="faq-answer">Streaks require completing your daily stack of up to 50 photos and videos at least once every calendar day, based on your local time zone. If a day is missed entirely, the streak resets - unless you had a Streak Freeze banked, which automatically covers a single missed day. You earn a new Streak Freeze (up to 3 banked at once) every 7-day milestone. Enable notifications from the permission prompt if you'd like a daily reminder before you lose one.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">How do I restore "Remove Ads Lifetime" or my "Unlimited Pass"?</div>
+            <div class="faq-answer">Open the Shop from the bottom navigation bar and tap "Restore Purchases". As long as you're signed in with the same Apple ID used for the original purchase, it will restore instantly at no extra cost.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">How do I get extra swipes once I've hit my daily limit?</div>
+            <div class="faq-answer">Tap "Watch Ad" on the refill prompt to watch a short rewarded video and unlock another batch, buy a one-off "Buy More Goes" top-up, or purchase the Unlimited Pass to remove the daily limit entirely.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">How does the search bar work?</div>
+            <div class="faq-answer">Type a term like "dogs", "beach", "documents", or "duplicates" and the app scans your library on-device (using Apple's Vision framework, plus free metadata checks for screenshots and burst photos) to bring back a real matching batch you can swipe through the same way as your daily stack.</div>
+        </div>
+
+        <h2>Contact Our Support Team</h2>
+        <div class="support-card">
+            <p>Need a hand with something specific? Email us with your device model, iOS version, and a brief description of the issue:</p>
+            <a href="mailto:hello@daryl.in" class="support-email">hello@daryl.in</a>
+            <br>
+            <p>We aim to respond to all enquiries within 24 hours.</p>
+        </div>
+
+        <footer>
+            &copy; 2026 Daily Digital Declutter. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>
