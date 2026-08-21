@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support & FAQ - Bento Sort</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #121113;
+            --card-dark: #1c1a1d;
+            --text-main: #f5f6fa;
+            --text-muted: #a4b0be;
+            --accent: #ff6b6b;
+            --accent-green: #1dd1a1;
+            --accent-blue: #54a0ff;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: var(--card-dark);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-main);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 8px;
+            margin-top: 40px;
+        }
+
+        p, li {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: var(--text-main);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .faq-question::before {
+            content: "🍱";
+            font-size: 1.2rem;
+        }
+
+        .faq-answer {
+            color: var(--text-muted);
+            padding-left: 28px;
+        }
+
+        .support-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 25px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .support-email {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--accent-blue);
+            margin: 15px 0;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .support-email:hover {
+            text-decoration: underline;
+        }
+
+        .btn {
+            background-color: var(--accent);
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 12px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s, filter 0.2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bento Sort</h1>
+        <div class="subtitle">Player Support & FAQ</div>
+
+        <p>Welcome to the Bento Sort support hub. If you've run into an issue, need help with your in-app purchases, or want to report a bug, we're here to help you get back to packing delicious bento boxes!</p>
+
+        <h2>Frequently Asked Questions (FAQ)</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">I bought coins but they haven't appeared in my game.</div>
+            <div class="faq-answer">
+                Please make sure your device is connected to the internet. If they don't load within a couple of minutes, close and restart the app. If you still don't see them, please contact us below with your transaction receipt, and we will credit your wallet immediately.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How do I restore my "Remove Ads" purchase?</div>
+            <div class="faq-answer">
+                If you reinstalled the game or switched to a new phone, open the <strong>Coin Shop</strong> in the game, scroll to the bottom, and tap <strong>"Restore Purchases"</strong>. As long as you are signed in with the same Apple/Google ID used for purchase, your ad-free status will restore instantly for free!
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Can I sync my high scores across multiple devices?</div>
+            <div class="faq-answer">
+                Currently, high scores and coin balances are saved locally to your device storage. We are actively working on Apple Game Center and Google Play Games sync for a future update!
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">The levels are getting too hard, how do I reset?</div>
+            <div class="faq-answer">
+                The progressive scoring curve is designed to test your spatial skills! If you find things getting tricky, try using your <strong>Trash Can</strong> or <strong>Shuffle</strong> power-ups purchased with in-game coins to escape vertical plate blocks.
+            </div>
+        </div>
+
+        <h2>Contact Support Team</h2>
+        <div class="support-card">
+            <p>Need custom help? Send our dedicated support team an email with your device model, iOS/Android version, and a brief description of the issue:</p>
+            <a href="mailto:hello@daryl.in" class="support-email">hello@daryl.in</a>
+            <br>
+            <p>We aim to respond to all player inquiries within 24 hours.</p>
+        </div>
+
+        <footer>
+            &copy; 2026 Bento Sort. All rights reserved. Registered App Store Support Desk.
+        </footer>
+    </div>
+</body>
+</html>

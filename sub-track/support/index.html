@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support & FAQ - SubTrackr</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Space+Grotesk:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --text-main: #e6edf3;
+            --text-muted: #9aa5b1;
+            --accent: #2dd4bf;
+            --line: rgba(255, 255, 255, 0.09);
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: var(--card);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--line);
+            box-sizing: border-box;
+        }
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 5px;
+            text-align: center;
+        }
+        .subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+        }
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-main);
+            border-bottom: 2px solid var(--line);
+            padding-bottom: 8px;
+            margin-top: 36px;
+        }
+        p, li { color: var(--text-muted); font-size: 1rem; }
+        strong { color: var(--text-main); }
+        .faq-item { margin-bottom: 22px; }
+        .faq-question { font-weight: 700; color: var(--text-main); font-size: 1.05rem; margin-bottom: 6px; }
+        .faq-answer { color: var(--text-muted); }
+        .support-card {
+            background: rgba(45, 212, 191, 0.08);
+            border: 1px solid rgba(45, 212, 191, 0.2);
+            border-radius: 16px;
+            padding: 25px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        .support-email {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin: 15px 0;
+            display: inline-block;
+            text-decoration: none;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--line);
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SubTrackr</h1>
+        <div class="subtitle">Support & FAQ</div>
+
+        <p>Welcome to the SubTrackr support hub. If a total looks wrong, a purchase hasn't appeared, or a reminder didn't fire, we're happy to help.</p>
+
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">Does SubTrackr connect to my bank account?</div>
+            <div class="faq-answer">No. SubTrackr never connects to any bank, card, or account. You enter each subscription's details yourself, and everything is calculated from what you've entered - nothing is verified against real transactions.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Can SubTrackr actually cancel my subscriptions for me?</div>
+            <div class="faq-answer">No app can safely do that without holding your login details for every service you subscribe to, which SubTrackr deliberately never asks for. What it does do: save a direct link to wherever you go to cancel each subscription, plus a shortcut to Apple's own subscription manager for anything billed through the App Store - so you're not hunting for the right page when you decide to cancel.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Why doesn't my monthly total exactly match my bank statement?</div>
+            <div class="faq-answer">Yearly and weekly subscriptions are converted to a monthly-equivalent figure (a yearly price divided across 12 months, for example) so everything can be compared on one dashboard. It's an estimate for comparison, not a live read of what's actually been charged.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How do renewal reminders work?</div>
+            <div class="faq-answer">A local notification is scheduled a few days before each active subscription's renewal date. If a subscription's next renewal is sooner than that, you'll still get a reminder, just with less notice. Reminders are rescheduled automatically whenever you add, edit, cancel, or delete a subscription.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">How do I restore my Premium purchase?</div>
+            <div class="faq-answer">Open the Premium modal from the footer and tap "Restore Purchases". As long as you're signed in with the same Apple ID used for the original purchase, it restores instantly at no extra cost.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What's the free tier limit?</div>
+            <div class="faq-answer">Free accounts can track 5 active subscriptions at once. Unlocking Premium (a one-time £2.99 purchase) removes that limit entirely and adds a spend-by-category breakdown, plus removes the banner ad.</div>
+        </div>
+
+        <h2>Contact Our Support Team</h2>
+        <div class="support-card">
+            <p>Need a hand with something specific? Email us with your device model, iOS version, and a brief description of the issue:</p>
+            <a href="mailto:hello@daryl.in" class="support-email">hello@daryl.in</a>
+            <br>
+            <p>We aim to respond to all enquiries within 24 hours.</p>
+        </div>
+
+        <footer>
+            &copy; 2026 SubTrackr. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>

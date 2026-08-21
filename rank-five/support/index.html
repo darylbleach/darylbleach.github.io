@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support & FAQ - Rank Five</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f4ecdc;
+            --card: #faf4e8;
+            --text-main: #2b2118;
+            --text-muted: #6b5c42;
+            --accent: #a5691e;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: var(--card);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(43, 33, 24, 0.1);
+            border: 1px solid rgba(43, 33, 24, 0.1);
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-family: 'Fraunces', serif;
+            font-size: 2.4rem;
+            font-weight: 900;
+            color: var(--accent);
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        h2 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-main);
+            border-bottom: 2px solid rgba(43, 33, 24, 0.1);
+            padding-bottom: 8px;
+            margin-top: 40px;
+        }
+
+        p, li { color: var(--text-muted); font-size: 1rem; }
+
+        .faq-item { margin-bottom: 25px; }
+
+        .faq-question {
+            font-weight: 600;
+            color: var(--text-main);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .faq-question::before { content: "📖"; font-size: 1.1rem; }
+
+        .faq-answer { color: var(--text-muted); padding-left: 28px; }
+
+        .support-card {
+            background: rgba(43, 33, 24, 0.03);
+            border: 1px solid rgba(43, 33, 24, 0.1);
+            border-radius: 16px;
+            padding: 25px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .support-email {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin: 15px 0;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid rgba(43, 33, 24, 0.1);
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Rank Five</h1>
+        <div class="subtitle">Player Support & FAQ</div>
+
+        <p>Welcome to the Rank Five support hub. If you've run into an issue or want to report a bug, we're here to help.</p>
+
+        <h2>Frequently Asked Questions (FAQ)</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">How do I restore my "Remove Ads" purchase?</div>
+            <div class="faq-answer">
+                Tap the ribbon icon in the top bar, then "Restore Purchases". As long as you're signed in with the same Apple/Google ID used for the purchase, your ad-free status restores instantly for free.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Why can I only play the Daily round once a day?</div>
+            <div class="faq-answer">
+                Everyone gets the same five items each day, and one attempt each - that's what makes it a genuine daily challenge you can compare with friends. Want to play more? Switch to Practice for unlimited random rounds any time.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">I missed a day - is my streak gone?</div>
+            <div class="faq-answer">
+                Yes - the streak only continues if you solve the order on consecutive days. A missed or failed day resets it, so the next win starts a fresh streak of 1.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Does sharing my result give away the answer?</div>
+            <div class="faq-answer">
+                No - the shared grid only shows how many guesses you used and which way each item needed to move (✅⬆️⬇️), never the actual order.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Where do the facts come from?</div>
+            <div class="faq-answer">
+                Every category is sourced from public reference data (geography, history, and science records) and checked before it ships. Spotted something that looks wrong? Please email us - we'll verify and correct it.
+            </div>
+        </div>
+
+        <h2>Contact Support Team</h2>
+        <div class="support-card">
+            <p>Need help, or think a fact needs correcting? Email us with your device model, iOS/Android version, and a brief description:</p>
+            <a href="mailto:hello@daryl.in" class="support-email">hello@daryl.in</a>
+            <br>
+            <p>We aim to respond within 24 hours.</p>
+        </div>
+
+        <footer>
+            &copy; 2026 Rank Five. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>

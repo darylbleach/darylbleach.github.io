@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support & FAQ - Little Allotment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #eef3e6;
+            --card: #f6f9f0;
+            --text-main: #223019;
+            --text-muted: #5b6b50;
+            --accent: #3f7d3a;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: var(--card);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(34, 48, 25, 0.1);
+            border: 1px solid rgba(34, 48, 25, 0.1);
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-family: 'Fraunces', serif;
+            font-size: 2.4rem;
+            font-weight: 900;
+            color: var(--accent);
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        h2 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-main);
+            border-bottom: 2px solid rgba(34, 48, 25, 0.1);
+            padding-bottom: 8px;
+            margin-top: 40px;
+        }
+
+        p, li { color: var(--text-muted); font-size: 1rem; }
+
+        .faq-item { margin-bottom: 25px; }
+
+        .faq-question {
+            font-weight: 600;
+            color: var(--text-main);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .faq-question::before { content: "🌱"; font-size: 1.1rem; }
+
+        .faq-answer { color: var(--text-muted); padding-left: 28px; }
+
+        .support-card {
+            background: rgba(34, 48, 25, 0.03);
+            border: 1px solid rgba(34, 48, 25, 0.1);
+            border-radius: 16px;
+            padding: 25px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .support-email {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin: 15px 0;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid rgba(34, 48, 25, 0.1);
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Little Allotment</h1>
+        <div class="subtitle">Player Support & FAQ</div>
+
+        <p>Welcome to the Little Allotment support hub. If you've run into an issue or want to report a bug, we're here to help.</p>
+
+        <h2>Frequently Asked Questions (FAQ)</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">How do I restore my "Remove Ads" purchase?</div>
+            <div class="faq-answer">
+                Tap the ribbon icon in the top bar, then "Restore Purchases". As long as you're signed in with the same Apple/Google ID used for the purchase, your ad-free status restores instantly for free.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Why can I only tend my garden once a day?</div>
+            <div class="faq-answer">
+                Everyone gets the same token pool and zone layout each day, and one allocation each - that's what makes it a genuine daily challenge you can compare with friends. Want to solve more allocation puzzles? Switch to Practice for a spare round any time - it won't touch your real garden or streak.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">What happens if I miss a day?</div>
+            <div class="faq-answer">
+                Your garden still grows a little on its own while you're away (capped at a few days' worth), but it's far less than an actively tended day. Your streak resets though - it only continues if you tend on consecutive days, so the next day you play starts a fresh streak of 1.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Why isn't dumping all my tokens into the best zone the right move?</div>
+            <div class="faq-answer">
+                Every zone gives diminishing returns the more tokens you put into it - so the highest-scoring split is almost always spread across two or more zones rather than one. Your score each day is shown as a percentage of the best possible allocation.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Does sharing my garden give away today's puzzle?</div>
+            <div class="faq-answer">
+                No - the shared image just shows your garden's current growth and your day's score, not the token pool or zone details anyone else would need to solve their own puzzle.
+            </div>
+        </div>
+
+        <h2>Contact Support Team</h2>
+        <div class="support-card">
+            <p>Need help? Email us with your device model, iOS/Android version, and a brief description:</p>
+            <a href="mailto:hello@daryl.in" class="support-email">hello@daryl.in</a>
+            <br>
+            <p>We aim to respond within 24 hours.</p>
+        </div>
+
+        <footer>
+            &copy; 2026 Little Allotment. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>

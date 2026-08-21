@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Spend Lens</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #080a0c;
+            --card-dark: #10151a;
+            --text-main: #f2f4f5;
+            --text-muted: #9aabaf;
+            --accent: #21d4a8;
+            --accent-amber: #f2b33d;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            background-color: var(--card-dark);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-main);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 8px;
+            margin-top: 30px;
+        }
+
+        p, ul {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .badge {
+            background-color: rgba(33, 212, 168, 0.1);
+            color: var(--accent);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .badge-amber {
+            background-color: rgba(242, 179, 61, 0.12);
+            color: var(--accent-amber);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Spend Lens</h1>
+        <div class="subtitle">Privacy Policy</div>
+
+        <p><strong>Effective Date:</strong> August 2026</p>
+        <p>Spend Lens is a personal budgeting app that connects to your bank account(s) so you can see your own spending in one place. This policy explains exactly what happens to your data, because with a finance app, that matters more than most.</p>
+
+        <h2>1. Everything stays on your device</h2>
+        <p>Every transaction, category, budget figure, and piece of spending advice Spend Lens generates is stored exclusively in <strong>local storage on your own device</strong>. We do not operate a database, we do not have user accounts, and we never see, collect, or transmit your transaction data to any server of ours.</p>
+
+        <h2>2. The one exception: connecting your bank</h2>
+        <p>Spend Lens uses <span class="badge">Plaid</span>, a regulated financial data network, to securely connect to your bank account(s). When you connect a bank:</p>
+        <ul>
+            <li>You authenticate directly with your bank via Plaid's secure Link flow - Spend Lens never sees or stores your online banking credentials.</li>
+            <li>A minimal server-side relay is required because Plaid's API requires a confidential secret key on every request (not just the initial connection) - this key can never live inside a shipped app, so the relay signs and forwards each Plaid API call (the connection handshake, and each subsequent fetch of your accounts and transactions) on Spend Lens's behalf. The relay is stateless: it does not store, log, or retain any of your transaction or account data after forwarding a request - it exists purely to attach the secret key Plaid requires.</li>
+            <li>Once fetched via that relay, your transaction data is stored only locally on your device, as described in section 1.</li>
+        </ul>
+
+        <h2>3. PIN & Face ID</h2>
+        <p>Spend Lens requires a PIN (and optionally Face ID/Touch ID, where supported) to open the app, given the sensitivity of financial data. Your PIN is stored as a salted cryptographic hash in your device's secure hardware-backed storage (Keychain on iOS) - never in plain text, and never leaves your device.</p>
+
+        <h2>4. No advertising, no tracking</h2>
+        <p>Spend Lens does not display third-party ads and does not integrate any advertising or analytics SDKs. No advertising identifiers are collected.</p>
+
+        <h2>5. Your Rights & Choices</h2>
+        <p>You can disconnect a bank account at any time from within the app, which removes its stored access token from your device. Deleting the app removes all locally stored data. To fully revoke Spend Lens's access to your bank data, you can also remove the connection directly via your bank's own security/connected-apps settings, or through Plaid's own account portal.</p>
+
+        <h2>6. Children's Privacy</h2>
+        <p>Spend Lens is a personal finance tool intended for adult use and does not knowingly collect data from children.</p>
+
+        <h2>7. Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, please reach out to us:</p>
+        <p>📧 <strong>hello@daryl.in</strong></p>
+
+        <footer>
+            &copy; 2026 Spend Lens. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>
