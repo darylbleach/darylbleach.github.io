@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Ante</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #F6F7F5;
+            --card: #ffffff;
+            --text-main: #1F2933;
+            --text-muted: #64748B;
+            --accent: #0B5A54;
+            --line: rgba(31, 41, 51, 0.12);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: var(--card);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(31, 41, 51, 0.10);
+            border: 1px solid var(--line);
+            box-sizing: border-box;
+        }
+        h1 {
+            font-family: 'Sora', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 5px;
+            text-align: center;
+        }
+        .subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+        }
+        h2 {
+            font-family: 'Sora', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-main);
+            border-bottom: 2px solid var(--line);
+            padding-bottom: 8px;
+            margin-top: 32px;
+        }
+        p, ul { color: var(--text-muted); font-size: 1rem; }
+        strong { color: var(--text-main); }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+        .badge {
+            background-color: rgba(11, 90, 84, 0.10);
+            color: var(--accent);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+        a { color: var(--accent); text-decoration: none; font-weight: 600; }
+        .note {
+            background-color: rgba(11, 90, 84, 0.06);
+            border: 1px solid rgba(11, 90, 84, 0.2);
+            border-radius: 16px;
+            padding: 16px 20px;
+            font-size: 0.95rem;
+        }
+        .note.important {
+            background-color: rgba(194, 65, 12, 0.06);
+            border-color: rgba(194, 65, 12, 0.3);
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--line);
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤝 Ante</h1>
+        <div class="subtitle">Privacy Policy</div>
+
+        <p><strong>Effective date:</strong> August 2026</p>
+        <p>Ante lets private friend groups create predictions on any outcome, track who called it right, and keep a running tally of who owes who. This policy explains what account and group data Ante stores and why.</p>
+
+        <div class="note important">
+            <strong>Ante never processes, holds, or moves real money.</strong> Stake amounts you enter are only used to calculate who owes what within your own group - Ante has no payment processor, no bank integration, and no way to send or receive funds. When a stake resolves, Ante shows you a balance; you and your friends settle that balance between yourselves (bank transfer, PayPal, cash, however you'd normally pay each other), entirely outside the app.
+        </div>
+
+        <h2>1. Account Data</h2>
+        <p>Creating an account requires either Sign in with Apple or an email address and password, handled by Firebase Authentication (part of Google). Ante stores your display name and, if you set one, a profile photo - visible to other members of groups you join, the same way a name is visible in any group chat.</p>
+
+        <h2>2. Group &amp; Stake Data</h2>
+        <p>Groups, stakes (predictions), your own predictions, and running balances are stored in a private cloud database (Google Firebase), visible only to members of that specific group. This includes:</p>
+        <ul>
+            <li>Group names and the list of members</li>
+            <li>Stake titles, stake amounts, deadlines, and outcomes</li>
+            <li>Your predictions - hidden from other group members until the deadline passes</li>
+            <li>Running balances between group members, and any settlement you mark as paid</li>
+        </ul>
+        <p>Your predictions on a stake are only ever visible to other members of that same private group, never publicly, and never to anyone outside groups you've joined.</p>
+
+        <h2>3. What "Stake Amount" Actually Means</h2>
+        <p>The amount you enter when creating a stake is a number used purely for arithmetic - working out who's owed what if they predicted correctly. It is not a payment, is never charged to any card, and Ante never sees or stores any bank or card details in connection with it.</p>
+
+        <h2>4. Third-Party Services We Use</h2>
+        <ul>
+            <li><span class="badge">Google Firebase</span> Authentication, database (Firestore), and server logic (Cloud Functions) that make groups and stakes work. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
+            <li><span class="badge">Google Analytics for Firebase</span> Collects standard app-usage analytics (screens viewed, feature usage, crashes) to help us understand how Ante is used and fix problems. It does not receive your stake amounts, predictions, balances, or any other group content - only usage events. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
+            <li><span class="badge">Apple Sign in with Apple</span> Used for account creation on iOS without sharing your real email if you choose Apple's private relay option.</li>
+            <li><span class="badge">App Store Billing</span> Ante Pro subscriptions are handled securely through Apple's App Store. We never collect, process, or store your card details.</li>
+        </ul>
+
+        <h2>5. Data Retention &amp; Deletion</h2>
+        <p>Leaving a group removes you from its member list, but historical stakes you took part in remain visible to the group you were a member of, the same way a message you sent in a group chat doesn't disappear when you leave it. To request full account deletion, contact us below.</p>
+
+        <h2>6. Your Rights &amp; Choices</h2>
+        <p>You can leave any group at any time (group owners must delete the group instead, since a v1 group always needs an owner). You can request a copy or deletion of your data at any time by contacting us.</p>
+
+        <h2>7. Children's Privacy</h2>
+        <p>Ante does not knowingly collect information from children, and is not directed at children.</p>
+
+        <h2>8. Contact Us</h2>
+        <p>If you have any questions, feedback, or data requests relating to this Privacy Policy, please get in touch:</p>
+        <p>📧 <strong>hello@daryl.in</strong></p>
+
+        <footer>
+            &copy; 2026 Ante. All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>
