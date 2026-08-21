@@ -1,48 +1,320 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Daryl Bleach</title>
-<style>
-  :root { color-scheme: light dark; }
-  body {
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: #fafafa;
-    color: #1a1a1a;
-  }
-  main {
-    max-width: 420px;
-    padding: 2rem;
-    text-align: center;
-  }
-  h1 {
-    font-size: 1.5rem;
-    margin: 0 0 0.5rem;
-  }
-  p {
-    color: #666;
-    line-height: 1.5;
-  }
-  a {
-    color: #0f766e;
-  }
-  @media (prefers-color-scheme: dark) {
-    body { background: #16181d; color: #eaeaea; }
-    p { color: #a3a3a3; }
-    a { color: #5eead4; }
-  }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daryl Bleach — Indie apps &amp; games</title>
+  <meta name="description" content="Indie iOS developer. A portfolio of independent mobile games and utility apps.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #14201c;
+      --ink-soft: #2a3a34;
+      --muted: #5c6b64;
+      --paper: #f3f6f2;
+      --paper-2: #e7efe8;
+      --accent: #1f7a5c;
+      --accent-deep: #145a43;
+      --line: rgba(20, 32, 28, 0.1);
+      --card: rgba(255, 255, 255, 0.72);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Outfit", system-ui, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, #cfe8d8 0%, transparent 55%),
+        radial-gradient(900px 500px at 100% 0%, #d9e6f0 0%, transparent 50%),
+        linear-gradient(180deg, var(--paper) 0%, var(--paper-2) 100%);
+      background-attachment: fixed;
+    }
+
+    a { color: var(--accent-deep); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: var(--accent); }
+
+    .wrap {
+      width: min(920px, calc(100% - 2.5rem));
+      margin: 0 auto;
+      padding: 4.5rem 0 5rem;
+    }
+
+    /* Hero: brand first, one composition */
+    .hero {
+      padding: 0 0 2.75rem;
+      border-bottom: 1px solid var(--line);
+      animation: rise 0.7s ease-out both;
+    }
+    .brand {
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 700;
+      font-size: clamp(2.6rem, 7vw, 4.2rem);
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      margin: 0 0 1rem;
+      color: var(--ink);
+    }
+    .lede {
+      max-width: 34rem;
+      margin: 0;
+      font-size: 1.15rem;
+      line-height: 1.55;
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    section {
+      padding: 2.5rem 0 0;
+      animation: rise 0.7s ease-out both;
+      animation-delay: 0.08s;
+    }
+    h2 {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin: 0 0 0.35rem;
+      letter-spacing: -0.02em;
+    }
+    .section-note {
+      margin: 0 0 1.25rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .apps {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .app {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.75rem 1.25rem;
+      align-items: baseline;
+      padding: 1rem 1.15rem;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      backdrop-filter: blur(8px);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .app:hover {
+      transform: translateY(-1px);
+      border-color: rgba(31, 122, 92, 0.35);
+    }
+    .app-name {
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--ink);
+      margin: 0;
+    }
+    .app-blurb {
+      margin: 0.2rem 0 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    .app-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem 0.9rem;
+      justify-content: flex-end;
+      align-items: center;
+      font-size: 0.88rem;
+      font-weight: 500;
+    }
+    .pill {
+      display: inline-block;
+      padding: 0.15rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(31, 122, 92, 0.12);
+      color: var(--accent-deep);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+    .pill.submitted {
+      background: rgba(20, 32, 28, 0.08);
+      color: var(--ink-soft);
+    }
+
+    .legal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 0.65rem;
+    }
+    .legal-card {
+      padding: 0.85rem 1rem;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(255,255,255,0.55);
+    }
+    .legal-card strong {
+      display: block;
+      font-size: 0.92rem;
+      margin-bottom: 0.35rem;
+    }
+    .legal-card a {
+      display: inline-block;
+      margin-right: 0.75rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    footer {
+      margin-top: 3.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.88rem;
+      animation: rise 0.7s ease-out both;
+      animation-delay: 0.16s;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 640px) {
+      .app {
+        grid-template-columns: 1fr;
+      }
+      .app-meta {
+        justify-content: flex-start;
+      }
+    }
+  </style>
 </head>
 <body>
-<main>
-  <h1>Daryl Bleach</h1>
-  <p>Indie iOS developer. Building a small portfolio of independent mobile games and utility apps.</p>
-</main>
+  <div class="wrap">
+    <header class="hero">
+      <h1 class="brand">Daryl Bleach</h1>
+      <p class="lede">Indie iOS developer. Small, focused games and utilities — no accounts, no clutter, built to be useful (or just fun) on your phone.</p>
+    </header>
+
+    <section aria-labelledby="featured-heading">
+      <h2 id="featured-heading">On the App Store</h2>
+      <p class="section-note">Live and currently in review.</p>
+      <ul class="apps">
+        <li class="app">
+          <div>
+            <p class="app-name">Tessera: Colour Block Puzzle</p>
+            <p class="app-blurb">Endless colour block-fitting with Daily Board, shards tools, and colour-match clears.</p>
+          </div>
+          <div class="app-meta">
+            <span class="pill">Live</span>
+            <a href="https://apps.apple.com/gb/app/tessera-colour-block-puzzle/id6799756847">App Store</a>
+            <a href="/tessera/privacy/">Privacy</a>
+            <a href="/tessera/support/">Support</a>
+          </div>
+        </li>
+        <li class="app">
+          <div>
+            <p class="app-name">Grid Zen: Cozy Shapes</p>
+            <p class="app-blurb">Shikaku-style cozy puzzle — carve the board into rectangles that add up.</p>
+          </div>
+          <div class="app-meta">
+            <span class="pill">Live</span>
+            <a href="/grid-zen/privacy/">Privacy</a>
+            <a href="/grid-zen/support/">Support</a>
+          </div>
+        </li>
+        <li class="app">
+          <div>
+            <p class="app-name">Daily Digital Declutter</p>
+            <p class="app-blurb">Swipe through a real daily batch of your photos and free up storage.</p>
+          </div>
+          <div class="app-meta">
+            <span class="pill">Live</span>
+            <a href="/digital-declutter/privacy/">Privacy</a>
+            <a href="/digital-declutter/support/">Support</a>
+          </div>
+        </li>
+        <li class="app">
+          <div>
+            <p class="app-name">Coop Escape: Traffic Run</p>
+            <p class="app-blurb">Endless lane-dodge arcade — hop a chicken through farm traffic.</p>
+          </div>
+          <div class="app-meta">
+            <span class="pill submitted">Submitted</span>
+            <a href="/coop-escape/privacy/">Privacy</a>
+            <a href="/coop-escape/support/">Support</a>
+          </div>
+        </li>
+        <li class="app">
+          <div>
+            <p class="app-name">Vault Cracker: Daily Code</p>
+            <p class="app-blurb">One shared Mastermind-style code a day. Spoiler-free share grid.</p>
+          </div>
+          <div class="app-meta">
+            <span class="pill submitted">Submitted</span>
+            <a href="/daily-vault/privacy/">Privacy</a>
+            <a href="/daily-vault/support/">Support</a>
+          </div>
+        </li>
+        <li class="app">
+          <div>
+            <p class="app-name">Rank Five: Daily Order</p>
+            <p class="app-blurb">Five real-world facts — put them in the right order before guesses run out.</p>
+          </div>
+          <div class="app-meta">
+            <span class="pill submitted">Submitted</span>
+            <a href="/rank-five/privacy/">Privacy</a>
+            <a href="/rank-five/support/">Support</a>
+          </div>
+        </li>
+        <li class="app">
+          <div>
+            <p class="app-name">Contour: One-Line Puzzle</p>
+            <p class="app-blurb">Trace each shape in one continuous stroke — no lifting, no reusing edges.</p>
+          </div>
+          <div class="app-meta">
+            <span class="pill submitted">Submitted</span>
+            <a href="/contour/privacy/">Privacy</a>
+            <a href="/contour/support/">Support</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="legal-heading">
+      <h2 id="legal-heading">Privacy &amp; support</h2>
+      <p class="section-note">Public policies for every app in the portfolio. Use these URLs in App Store Connect.</p>
+      <div class="legal-grid">
+        <div class="legal-card"><strong>Tessera</strong><a href="/tessera/privacy/">Privacy</a><a href="/tessera/support/">Support</a></div>
+        <div class="legal-card"><strong>Grid Zen</strong><a href="/grid-zen/privacy/">Privacy</a><a href="/grid-zen/support/">Support</a></div>
+        <div class="legal-card"><strong>Daily Digital Declutter</strong><a href="/digital-declutter/privacy/">Privacy</a><a href="/digital-declutter/support/">Support</a></div>
+        <div class="legal-card"><strong>Coop Escape</strong><a href="/coop-escape/privacy/">Privacy</a><a href="/coop-escape/support/">Support</a></div>
+        <div class="legal-card"><strong>Vault Cracker</strong><a href="/daily-vault/privacy/">Privacy</a><a href="/daily-vault/support/">Support</a></div>
+        <div class="legal-card"><strong>Rank Five</strong><a href="/rank-five/privacy/">Privacy</a><a href="/rank-five/support/">Support</a></div>
+        <div class="legal-card"><strong>Contour</strong><a href="/contour/privacy/">Privacy</a><a href="/contour/support/">Support</a></div>
+        <div class="legal-card"><strong>Bento Sort</strong><a href="/bento-sort/privacy/">Privacy</a><a href="/bento-sort/support/">Support</a></div>
+        <div class="legal-card"><strong>SubTrackr</strong><a href="/sub-track/privacy/">Privacy</a><a href="/sub-track/support/">Support</a></div>
+        <div class="legal-card"><strong>FPL Assistant</strong><a href="/fpl-assistant/privacy/">Privacy</a><a href="/fpl-assistant/support/">Support</a></div>
+        <div class="legal-card"><strong>Scraps</strong><a href="/scraps/privacy/">Privacy</a><a href="/scraps/support/">Support</a></div>
+        <div class="legal-card"><strong>Reverse Tycoon</strong><a href="/reverse-tycoon/privacy/">Privacy</a><a href="/reverse-tycoon/support/">Support</a></div>
+        <div class="legal-card"><strong>Outguess AI</strong><a href="/outguess-ai/privacy/">Privacy</a><a href="/outguess-ai/support/">Support</a></div>
+        <div class="legal-card"><strong>Pour Perfect</strong><a href="/pour-perfect/privacy/">Privacy</a><a href="/pour-perfect/support/">Support</a></div>
+        <div class="legal-card"><strong>Little Allotment</strong><a href="/little-allotment/privacy/">Privacy</a><a href="/little-allotment/support/">Support</a></div>
+        <div class="legal-card"><strong>Hidden Rule</strong><a href="/hidden-rule/privacy/">Privacy</a><a href="/hidden-rule/support/">Support</a></div>
+        <div class="legal-card"><strong>Spend Lens</strong><a href="/spend-lens/privacy/">Privacy</a><a href="/spend-lens/support/">Support</a></div>
+        <div class="legal-card"><strong>Ante</strong><a href="/ante/privacy/">Privacy</a><a href="/ante/support/">Support</a></div>
+        <div class="legal-card"><strong>Bento Merge</strong><a href="/bento-merge/privacy/">Privacy</a><a href="/bento-merge/support/">Support</a></div>
+        <div class="legal-card"><strong>Bento Organiser</strong><a href="/bento-organiser/privacy/">Privacy</a><a href="/bento-organiser/support/">Support</a></div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Daryl Bleach · Contact <a href="mailto:hello@daryl.in">hello@daryl.in</a> · <a href="/app-ads.txt">app-ads.txt</a></p>
+    </footer>
+  </div>
 </body>
 </html>
