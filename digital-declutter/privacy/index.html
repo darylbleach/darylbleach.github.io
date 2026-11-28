@@ -124,6 +124,7 @@
             border-top: 1px solid var(--line);
             padding-top: 20px;
         }
+        footer a { margin: 0 8px; }
     </style>
 </head>
 <body>
@@ -131,40 +132,41 @@
         <h1>Daily Digital Declutter</h1>
         <div class="subtitle">Privacy Policy</div>
 
-        <p><strong>Effective date:</strong> 6 August 2026</p>
-        <p>Your privacy matters to us. This Privacy Policy sets out the types of information collected, used and safeguarded by <strong>Daily Digital Declutter</strong> ("the App") when used on your iOS device.</p>
+        <p><strong>Effective date:</strong> 28 November 2026 (Android and Google Play wording added; first published 6 August 2026)</p>
+        <p>Your privacy matters to us. This Privacy Policy sets out the types of information collected, used and safeguarded by <strong>Daily Digital Declutter</strong> ("the App") when used on your iPhone, iPad or Android device. The App is published by <strong>Two Bees Digital Ltd</strong>.</p>
 
         <div class="note">
-            <strong>In short:</strong> the App reads your real Photos library on your device to show you your own photos and videos, and can search or classify them on-device to power the search feature. None of that ever leaves your phone — there is no server, no account, and no upload of any photo, thumbnail, or search term anywhere.
+            <strong>In short:</strong> the App reads your real photo and video library on your device to show you your own photos and videos, and can search or classify them on-device to power the search feature. None of that ever leaves your phone — there is no server, no account, and no upload of any photo, thumbnail, or search term anywhere.
         </div>
 
         <h2>1. Your Photos &amp; Videos Library</h2>
-        <p>Daily Digital Declutter's entire purpose is to help you review and delete your own photos and videos, so the App requests access to your device's Photos library (via Apple's <code>PHPhotoLibrary</code> framework) the first time you open it. If you decline, the App cannot function.</p>
+        <p>Daily Digital Declutter's entire purpose is to help you review and delete your own photos and videos, so the App requests access to your device's photo and video library the first time you open it: on iPhone and iPad through Apple's <code>PHPhotoLibrary</code> framework, and on Android through the system photo and video permissions (Android 13 and later: "Photos and videos", or on Android 14 and later you may choose to share only selected photos; earlier Android versions: "Storage"). If you decline, the App cannot function. On Android the App uses this access only to show and delete your own photos and videos, for no other purpose.</p>
         <ul>
             <li><strong>What we read:</strong> your photo and video assets, their creation dates, pixel dimensions/duration, and thumbnail images, in order to build your daily batch of up to 50 items and generate the cards you swipe through.</li>
-            <li><strong>What we delete:</strong> only items you explicitly swipe left and then confirm in the single native "Delete N Photos?" prompt shown by iOS itself before anything is removed. Nothing is ever deleted automatically or without that confirmation.</li>
+            <li><strong>What we delete:</strong> only items you explicitly swipe left and then confirm in the single native confirmation prompt shown by your device itself (iOS: "Delete N Photos?"; Android 11 and later: the system "Allow the app to delete these items?" prompt) before anything is removed. On Android 10 the system asks once per item, and on Android 9 and earlier the App asks you to confirm in its own dialog first. Nothing is ever deleted automatically or without that confirmation.</li>
             <li><strong>What never leaves your device:</strong> your photos, video files, thumbnails, and any metadata about them. There is no server behind this App — everything above happens entirely on your phone.</li>
         </ul>
 
         <h2>2. On-Device Search &amp; Classification</h2>
-        <p>The search bar lets you type a term (like "dogs", "beach", "documents", or "duplicates") to find matching photos. This is powered entirely by Apple's on-device <strong>Vision</strong> framework — image classification happens locally on your phone's processor. No photo, thumbnail, or search term is ever sent to us or to any third party. Classification results are cached in a file inside the App's own local storage on your device (never synced anywhere) purely so repeat searches don't have to re-analyse the same photo twice.</p>
-        <p>When your device is charging, the App may also do this classification work quietly in the background (via iOS's <code>BGProcessingTask</code> API) so search results are ready faster the next time you use it. That same overnight pass can also pre-fetch full-resolution copies of photos likely to appear in tomorrow's daily batch from <strong>your own iCloud Photos account</strong> (the same download Photos.app would do), so cards open faster. This background work only runs while charging, specifically to avoid draining your battery. Classification itself stays on-device; the only network activity is fetching your own photo data from your own iCloud account when a full-resolution copy isn't already cached locally. No photo data is sent to us or to any other third party.</p>
+        <p>The search bar lets you type a term (like "dogs", "beach", "documents", or "duplicates") to find matching photos. This is powered entirely by on-device image classification: Apple's <strong>Vision</strong> framework on iPhone and iPad, and Google's <strong>ML Kit</strong> image labelling on Android (the model is bundled inside the App and runs locally on your phone's processor, with no network connection needed). No photo, thumbnail, or search term is ever sent to us or to any third party. Classification results are cached in a file inside the App's own local storage on your device (never synced anywhere) purely so repeat searches don't have to re-analyse the same photo twice.</p>
+        <p>On iPhone and iPad, when your device is charging, the App may also do this classification work quietly in the background (via iOS's <code>BGProcessingTask</code> API) so search results are ready faster the next time you use it. That same overnight pass can also pre-fetch full-resolution copies of photos likely to appear in tomorrow's daily batch from <strong>your own iCloud Photos account</strong> (the same download Photos.app would do), so cards open faster. This background work only runs while charging, specifically to avoid draining your battery. Classification itself stays on-device; the only network activity is fetching your own photo data from your own iCloud account when a full-resolution copy isn't already cached locally. No photo data is sent to us or to any other third party. The Android version does not do background indexing and does not fetch photos from any cloud account; it only reads what is already stored on the device.</p>
 
         <h2>3. Local Notifications</h2>
-        <p>If you grant permission, the App may schedule a single local reminder notification (e.g. "Don't lose your streak!") using Apple's on-device notification scheduler. These notifications are generated and delivered entirely on your device — no push notification server is involved, and no data about you is sent anywhere to make this happen.</p>
+        <p>If you grant permission, the App may schedule a single local reminder notification (e.g. "Don't lose your streak!") using the device's own on-device notification scheduler (on Android 13 and later this needs the notification permission). These notifications are generated and delivered entirely on your device — no push notification server is involved, and no data about you is sent anywhere to make this happen.</p>
 
         <h2>4. Information We Collect Automatically</h2>
         <p>Daily Digital Declutter is free to use, supported by third-party advertising and optional in-app purchases. To provide these services, we use standard industry software development kits (SDKs) which may collect certain device-level information:</p>
         <ul>
-            <li><strong>Technical data:</strong> your device model, operating system version, and system language, used to serve contextual (non-personalised) advertising. The App does not request permission to track you across other companies' apps or websites, and does not use Apple's advertising identifier (IDFA).</li>
+            <li><strong>Technical data:</strong> your device model, operating system version, and system language, used to serve contextual (non-personalised) advertising. On iPhone and iPad the App does not request permission to track you across other companies' apps or websites, and does not use Apple's advertising identifier (IDFA).</li>
+            <li><strong>Android advertising ID:</strong> on Android, the Google Mobile Ads SDK reads your device's advertising ID (a resettable identifier provided by Google Play services) for ad delivery, frequency capping, measurement and fraud prevention, and, where you have consented, ad personalisation. The App itself never reads, stores or transmits this ID.</li>
             <li><strong>App data:</strong> your daily streak, Streak Freezes, total items cleared, and reclaimed storage total are stored solely and persistently on your own device using local storage — never uploaded to us or to any server.</li>
         </ul>
 
         <h2>5. Third-Party Services We Use</h2>
         <p>The App integrates the following third-party services, each with its own independent privacy policy:</p>
         <ul>
-            <li><span class="badge">Google AdMob</span> We use the Google Mobile Ads SDK to display banner, interstitial, and rewarded video adverts. The App does not request tracking permission, so adverts are contextual rather than personalised to you individually. AdMob never receives your photos, search terms, or anything about your Photos library. You can read Google's policy here: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</li>
-            <li><span class="badge">App Store Billing</span> In-app purchases ("Remove Ads Lifetime", "Unlimited Pass", and "Buy More Goes") are handled securely through Apple's App Store. We never collect, process or store your card details or payment credentials.</li>
+            <li><span class="badge">Google AdMob</span> We use the Google Mobile Ads SDK to display banner, interstitial, and rewarded video adverts. On iPhone and iPad the App does not request tracking permission, so adverts are contextual rather than personalised to you individually. On Android, whether adverts are personalised depends on your consent choice (UK/EEA) and your device's ad settings. AdMob never receives your photos, search terms, or anything about your Photos library. You can read Google's policy here: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</li>
+            <li><span class="badge">App Store / Google Play Billing</span> In-app purchases ("Remove Ads Lifetime", "Unlimited Pass", and "Buy More Goes") are handled securely through Apple's App Store on iOS, or Google Play Billing on Android. We never collect, process or store your card details or payment credentials.</li>
         </ul>
 
         <h2>6. How We Use Collected Data</h2>
@@ -175,17 +177,19 @@
         </ul>
 
         <h2>7. Your Rights &amp; Choices</h2>
-        <p>You can revoke the App's access to your Photos library at any time via <em>Settings &gt; Privacy &amp; Security &gt; Photos &gt; Daily Digital Declutter</em>. The App will simply stop working until access is granted again, since it has no fallback content of its own.</p>
+        <p>You can revoke the App's access to your photo library at any time: on iPhone and iPad via <em>Settings &gt; Privacy &amp; Security &gt; Photos &gt; Daily Digital Declutter</em>, and on Android via <em>Settings &gt; Apps &gt; Daily Digital Declutter &gt; Permissions</em>. On iPhone and iPad you can restrict advertising tracking from Settings &gt; Privacy &amp; Security &gt; Tracking; on Android you can reset or delete your advertising ID, or opt out of personalised ads, from Settings &gt; Privacy &gt; Ads (or Settings &gt; Google &gt; Ads on some devices). Uninstalling the App removes all locally stored App data. The App will simply stop working until access is granted again, since it has no fallback content of its own.</p>
 
         <h2>8. Children's Privacy</h2>
         <p>Daily Digital Declutter does not knowingly collect any personally identifiable information from children. If you believe your data has been processed incorrectly, please contact us straight away using the details below.</p>
 
         <h2>9. Contact Us</h2>
         <p>If you have any questions, feedback, or data requests relating to this Privacy Policy, please get in touch:</p>
-        <p>&#128231; <strong>hello@daryl.in</strong></p>
+        <p>&#128231; <strong>hello@twobeesdigital.co.uk</strong></p>
 
         <footer>
-            &copy; 2026 Daily Digital Declutter. All rights reserved.
+            &copy; 2026 Two Bees Digital Ltd. All rights reserved.<br>
+            <a href="/digital-declutter/terms/">Terms of Service</a>
+            <a href="/digital-declutter/support/">Support</a>
         </footer>
     </div>
 </body>
