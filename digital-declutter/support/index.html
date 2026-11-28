@@ -122,6 +122,7 @@
             border-top: 1px solid var(--line);
             padding-top: 20px;
         }
+        footer a { margin: 0 8px; }
     </style>
 </head>
 <body>
@@ -134,11 +135,11 @@
         <h2>Frequently Asked Questions</h2>
         <div class="faq-item">
             <div class="faq-question">Does this app delete my real photos?</div>
-            <div class="faq-answer">Yes — the cards you swipe through are genuinely pulled from your own Photos library. Nothing is ever deleted, though, until you confirm the whole marked batch behind iOS's own native "Delete N Photos?" prompt. Cancel that prompt and nothing is removed; your marks are kept so you can pick up where you left off.</div>
+            <div class="faq-answer">Yes — the cards you swipe through are genuinely pulled from your own photo library. Nothing is ever deleted, though, until you confirm the whole marked batch behind your device's own native prompt (iOS: "Delete N Photos?"; Android 11 and later: the system's "Allow the app to delete these items?" prompt, shown once for the whole batch). Cancel that prompt and nothing is removed; your marks are kept so you can pick up where you left off.</div>
         </div>
         <div class="faq-item">
             <div class="faq-question">Does my photo data ever leave my phone?</div>
-            <div class="faq-answer">No. Your photos, videos, and thumbnails are never uploaded anywhere — there's no server behind this app. On-device search and duplicate detection use Apple's Vision framework running locally on your phone; search terms and classification results never leave your device either.</div>
+            <div class="faq-answer">No. Your photos, videos, and thumbnails are never uploaded anywhere — there's no server behind this app. On-device search and duplicate detection run locally on your phone (Apple's Vision framework on iPhone and iPad, Google's ML Kit image labelling on Android); search terms and classification results never leave your device either.</div>
         </div>
         <div class="faq-item">
             <div class="faq-question">My streak reset unexpectedly - why?</div>
@@ -146,7 +147,7 @@
         </div>
         <div class="faq-item">
             <div class="faq-question">How do I restore "Remove Ads Lifetime" or my "Unlimited Pass"?</div>
-            <div class="faq-answer">Open the Shop from the bottom navigation bar and tap "Restore Purchases". As long as you're signed in with the same Apple ID used for the original purchase, it will restore instantly at no extra cost.</div>
+            <div class="faq-answer">Open the Shop from the bottom navigation bar and tap "Restore Purchases". As long as you're signed in with the same Apple ID (iPhone and iPad) or Google account (Android) used for the original purchase, it will restore instantly at no extra cost.</div>
         </div>
         <div class="faq-item">
             <div class="faq-question">How do I get extra swipes once I've hit my daily limit?</div>
@@ -154,19 +155,26 @@
         </div>
         <div class="faq-item">
             <div class="faq-question">How does the search bar work?</div>
-            <div class="faq-answer">Type a term like "dogs", "beach", "documents", or "duplicates" and the app scans your library on-device (using Apple's Vision framework, plus free metadata checks for screenshots and burst photos) to bring back a real matching batch you can swipe through the same way as your daily stack.</div>
+            <div class="faq-answer">Type a term like "dogs", "beach", "documents", or "duplicates" and the app scans your library on-device (using Apple's Vision framework on iPhone and iPad or Google's ML Kit on Android, plus free metadata checks for screenshots and burst photos) to bring back a real matching batch you can swipe through the same way as your daily stack.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">The app says access was denied and the button opens Settings - what do I do? (Android)</div>
+            <div class="faq-answer">Android stops showing its permission prompt after it has been declined twice. Tap "Open Settings", choose Permissions, then Photos and videos (or Storage on older Android versions), and allow access, either all photos or the ones you select. Then come back to the app and tap "Get Started".</div>
         </div>
 
         <h2>Contact Our Support Team</h2>
         <div class="support-card">
-            <p>Need a hand with something specific? Email us with your device model, iOS version, and a brief description of the issue:</p>
+            <p>Need a hand with something specific? Email us with your device model, iOS or Android version, and a brief description of the issue:</p>
             <a href="mailto:hello@daryl.in" class="support-email">hello@daryl.in</a>
             <br>
             <p>We aim to respond to all enquiries within 24 hours.</p>
         </div>
 
         <footer>
-            &copy; 2026 Daily Digital Declutter. All rights reserved.
+            &copy; 2026 Two Bees Digital Ltd. All rights reserved.<br>
+            <a href="/digital-declutter/privacy/">Privacy Policy</a>
+            <a href="/digital-declutter/terms/">Terms of Service</a>
         </footer>
     </div>
 </body>
